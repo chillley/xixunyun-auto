@@ -35,9 +35,9 @@ function sign(token) {
       // sendEmail('习讯云签到提交', res.data.message)
     }
   }).catch((error)=>{
-     console.log("签到失败")
-     wechatSend('习讯云签到提交失败', JSON.stringify(error))
-    //  wechatSend('习讯云签到提交失败', '签到失败')
+     console.log(error)
+    // wechatSend('习讯云签到提交失败', JSON.stringify(error))
+      wechatSend('习讯云签到提交失败', '签到失败')
   })
 }
 
