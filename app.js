@@ -35,7 +35,7 @@ function sign(data) {
   axios.post(signApi, signdata, { headers }).then((res) => {
     if (res && res.data) {
       console.log(res.data)
-      if (res.data.code!=20000 && res.data.code==99999 && count <3){
+      if (res.data.code!=20000 && res.data.code==99999 && count <10){
         count++
         sign(data)
       }else if (res.data.code ==20000 ){
