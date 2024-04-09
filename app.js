@@ -59,7 +59,8 @@ function wechatSend(type, msg) {
   const params = {
     token: qs.token,
     title: type,
-    content: msg
+    content: msg,
+    topic:'001'
   }
   axios.get('http://www.pushplus.plus/send', { params }).then((res) => {
     console.log(res)
